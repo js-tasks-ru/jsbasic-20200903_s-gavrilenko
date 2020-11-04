@@ -2,11 +2,6 @@ import createElement from '../../assets/lib/create-element.js';
 
 export default class ProductCard {
   constructor(product) {
-    this.name = product.name;
-    this.price = product.price;
-    this.category = product.category;
-    this.img = product.img;
-    this.id = product.id;
 
     let main_div = document.createElement('div');
     let top_div = document.createElement('div');
@@ -25,11 +20,11 @@ export default class ProductCard {
     button.classList.add("card__button");
     title_div.classList.add("card__title");
 
-    top_img.setAttribute("img", `/assets/images/products/${product.img}`);
+    top_img.setAttribute("src", `assets/images/products/${product.image}`);
     top_img.setAttribute("alt", "product");
     span.innerHTML = `€${product.price}.00`;
     title_div.innerHTML = `${product.name}`;
-    body_img.setAttribute("src", "/assets/images/icons/plus-icon.svg");
+    body_img.setAttribute("src", "../../assets/images/icons/plus-icon.svg");
     body_img.setAttribute("alt", "icon");
     button.setAttribute("type", "button");
 
@@ -40,6 +35,14 @@ export default class ProductCard {
     body_div.append(title_div);
     button.append(body_img);
     body_div.append(button);
+
+    button.addEventListener("click", function () {
+      let event = new CustomEvent("product-add", {
+        detail: product.id,
+        bubbles: true
+      })
+      main_div.dispatchEvent(event)
+    })
 
     this.elem = main_div;
   }
