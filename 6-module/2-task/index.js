@@ -20,7 +20,7 @@ export default class ProductCard {
     button.classList.add("card__button");
     title_div.classList.add("card__title");
 
-    top_img.setAttribute("src", `assets/images/products/${product.image}`);
+    top_img.setAttribute("src", `../../assets/images/products/${product.image}`);
     top_img.setAttribute("alt", "product");
     span.innerHTML = `€${product.price}.00`;
     title_div.innerHTML = `${product.name}`;
