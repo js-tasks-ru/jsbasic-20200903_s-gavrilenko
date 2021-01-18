@@ -39,12 +39,7 @@ export default class CartIcon {
   }
 
   updatePosition() {
-    //console.log(cart)
-    //console.log(true)
     let cartIcon = document.querySelector(".cart-icon_visible")
-
-    //console.log(document.querySelectorAll(".container")[1].getBoundingClientRect().x + document.querySelectorAll(".container")[1].getBoundingClientRect().width + 20)
-    //console.log(window.)
     if (cartIcon != null && window.pageYOffset >= 50 && document.documentElement.clientWidth > 767) {
       if (cartIcon.style.position != "fixed") {
         cartIcon.style.position = "fixed"

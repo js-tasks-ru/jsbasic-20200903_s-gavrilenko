@@ -22,7 +22,7 @@ export default class ProductCard {
 
     top_img.setAttribute("src", `../../assets/images/products/${product.image}`);
     top_img.setAttribute("alt", "product");
-    span.innerHTML = `€${product.price}.00`;
+    span.innerHTML = `€${product.price.toFixed(2)}`;
     title_div.innerHTML = `${product.name}`;
     body_img.setAttribute("src", "../../assets/images/icons/plus-icon.svg");
     body_img.setAttribute("alt", "icon");
