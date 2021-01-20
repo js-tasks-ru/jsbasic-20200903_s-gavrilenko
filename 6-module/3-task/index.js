@@ -46,7 +46,7 @@ export default class Carousel {
         btnLeft.style.display = '';
         let width = 0;
         for (let i = 0; i <= current; i++) {
-          width = width + 988
+          width = width + 500
         }
         current = current + 1;
         if (current == slides1.length - 1) {
@@ -60,7 +60,7 @@ export default class Carousel {
         btnRight.style.display = '';
         let widthLeft = 0;
         for (let i = 1; i < current; i++) {
-          widthLeft = widthLeft + 988
+          widthLeft = widthLeft + 500
         }
         current = current - 1;
         if (current == 0) {

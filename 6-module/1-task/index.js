@@ -67,7 +67,7 @@ export default class UserTable {
     main.insertAdjacentHTML('beforeend', `<td>${row.name}</td> <td>${row.age}</td> <td>${row.salary}</td>`)
     main.append(td)
     btn.addEventListener('click', function () {
-      main.setAttribute("hidden", "hidden");
+      main.remove();
     })
     return main;
   }

@@ -18,10 +18,9 @@ export default class Modal {
       body[0].classList.remove("is-modal-open");
       main.remove()
     })
-    document.addEventListener('keydown', function (ev) {
-      if (ev.key === "Escape") {
-        let body = document.getElementsByTagName('body');
-        body[0].classList.remove("is-modal-open");
+    document.body.addEventListener('keydown', function (ev) {
+      if (ev.code === "Escape") {
+        document.body.classList.remove("is-modal-open");
         main.remove()
       }
     })
