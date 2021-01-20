@@ -23,15 +23,14 @@ export default class Cart {
   }
 
   updateProductCount(productId, amount) {
-    console.log(productId, amount)
     if (this.cartItems.length !== 0) {
       for (let i = 0; i < this.cartItems.length; i++) {
         if (productId === this.cartItems[i].product.id) {
-          console.log(4)
           this.cartItems[i].count = this.cartItems[i].count + amount
           if (this.cartItems[i].count === 0) {
             this.cartItems.splice(i, 1)
           }
+
           break;
         }
       }
