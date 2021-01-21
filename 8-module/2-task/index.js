@@ -34,12 +34,9 @@ export default class ProductGrid {
     return main1
   }
   updateFilter(filters) {
-
-    let main1 = document.querySelector(".products-grid")
-    main1.innerHTML = "";
+    this.elem.innerHTML = "";
     let main = document.createElement("div");
     main.classList.add("products-grid__inner");
-
     this.filters = Object.assign(this.filters, filters);
     for (let i of this.products) {
       if (this.filters.noNuts && i.nuts)
@@ -56,8 +53,7 @@ export default class ProductGrid {
 
       main.append(card.elem);
     }
-    console.log(main)
-    main1.append(main)
+    this.elem.append(main)
     return main
   }
 }

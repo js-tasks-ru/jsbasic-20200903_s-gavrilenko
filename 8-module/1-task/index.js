@@ -43,6 +43,7 @@ export default class CartIcon {
     if (cartIcon != null && window.pageYOffset >= 50 && document.documentElement.clientWidth > 767) {
       if (cartIcon.style.position != "fixed") {
         cartIcon.style.position = "fixed"
+        cartIcon.style.zIndex = 1000
         cartIcon.style.top = "50px"
       }
       cartIcon.style.left = `${Math.min(

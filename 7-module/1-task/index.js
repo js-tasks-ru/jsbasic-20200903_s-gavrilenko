@@ -5,6 +5,7 @@ export default class RibbonMenu {
     this.categories = categories;
     let main = this.createMenu(categories);
     this.createScroll(main)
+    this.value;
     const links = main.querySelectorAll(".ribbon__item");
     for (let a = 0; a < links.length; a++) {
       links[a].addEventListener("click", function (tg) {
@@ -13,6 +14,7 @@ export default class RibbonMenu {
           bubbles: true
         })
         main.dispatchEvent(event)
+        this.value = links[a].getAttribute('data-id')
       })
     }
     this.elem = main;
@@ -41,12 +43,10 @@ export default class RibbonMenu {
     btnR.addEventListener('click', function () {
       width = 350
       inner.scrollBy(width, 0);
-      console.log(width)
     })
     btnL.addEventListener('click', function () {
       width = -350
       inner.scrollBy(width, 0);
-      console.log(width)
     })
   }
 }
