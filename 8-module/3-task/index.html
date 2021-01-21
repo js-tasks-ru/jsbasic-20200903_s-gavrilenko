@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Бангкок Экспресс: Корзина</title>
 
-  <link rel="stylesheet" href="../1-task/index.css" />
-  <link rel="stylesheet" href="/assets/styles/common.css" />
+  <link rel="stylesheet" href="../../1-task/index.css" />
+  <link rel="stylesheet" href="../../assets/styles/common.css" />
 </head>
 
 <body>
@@ -39,13 +39,13 @@
           только если этот товар уже добавлен в корзину, иначе в консоле будет ошибка</p>
 
         <div style="padding-top: 20px;">
-          <button class="button"
-          data-increase-count-product-id="laab-kai-chicken-salad">Увеличить на единицу количество Товара 1</button>
+          <button class="button" data-increase-count-product-id="laab-kai-chicken-salad">Увеличить на единицу количество
+            Товара 1</button>
         </div>
 
         <div style="padding-top: 20px;">
-          <button class="button"
-          data-decrease-count-product-id="laab-kai-chicken-salad">Уменьшить на единицу количество Товара 1</button>
+          <button class="button" data-decrease-count-product-id="laab-kai-chicken-salad">Уменьшить на единицу количество
+            Товара 1</button>
         </div>
       </div>
 
@@ -107,7 +107,7 @@
       if (button.dataset.increaseCountProductId) {
         let productId = button.dataset.increaseCountProductId;
         cart.updateProductCount(productId, 1);
-
+        console.log(cart.getTotalPrice())
         return;
       }
 

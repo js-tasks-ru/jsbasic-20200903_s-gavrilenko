@@ -30,8 +30,7 @@ describe('6-module-2-task', () => {
     it('карточка товара должна содержать картинку', () => {
       let imageElement = sut.elem.querySelector('.card__image');
       let actualImageSrc = imageElement.src.trim();
-      let expectedImageSrc = `/assets/images/products/${product.image}`;
-
+      let expectedImageSrc = `assets/images/products/${product.image}`;
       let isCorrectSource = actualImageSrc.includes(expectedImageSrc);
 
       expect(isCorrectSource).toBe(true);
